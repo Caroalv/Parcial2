@@ -12,6 +12,8 @@
         <RouterLink :to="{name:'FeaturesPagina' }">Feature</RouterLink>
         <RouterLink :to="{ name: 'ContactoPagina'}">Contacto Pagina</RouterLink>
         <RouterLink :to="{ name: 'PreciosPagina'}">Precio</RouterLink>
+        <RouterLink :to="{ name: 'api'}">Pokedex</RouterLink>
+
       </nav>
     </header>
     <!-- Fin Header -->

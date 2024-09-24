@@ -24,6 +24,11 @@ const routes = [
     name: 'PreciosPagina',
     component: () => import('@/modules/landing/pages/PreciosPagina.vue'),
   },
+  {
+    path: '/api',
+    name: 'Api',
+    component: () => import('@/modules/landing/pages/Api.vue'),
+  },
 ];
 
 // Crear el router

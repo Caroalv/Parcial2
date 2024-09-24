@@ -18,10 +18,11 @@
         class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md"
       >
         <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
-        <p class="leading-relaxed mb-5 text-gray-600">Busca tus tiendas mas cercanas</p>
+        <p class="leading-relaxed mb-5 text-gray-600">Busca tus tiendas más cercanas</p>
         <div class="relative mb-4">
           <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
           <input
+            v-model="email"
             type="email"
             id="email"
             name="email"
@@ -31,18 +32,53 @@
         <div class="relative mb-4">
           <label for="message" class="leading-7 text-sm text-gray-600">Mensaje</label>
           <textarea
+            v-model="message"
             id="message"
             name="message"
             class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
           ></textarea>
         </div>
         <button
+          @click="sendEmail"
           class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
         >
-          Boton
+          Enviar
         </button>
         <p class="text-xs text-gray-500 mt-3">Este es un texto de ejemplo.</p>
       </div>
     </div>
   </section>
 </template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      email: '',
+      message: '',
+    };
+  },
+  methods: {
+    async sendEmail() {
+      try {
+        const response = await axios.post('http://localhost:3000/send-email', {
+          email: this.email,
+          message: this.message,
+        });
+        console.log('Correo enviado:', response.data);
+        alert('Correo enviado correctamente'); // Alerta de éxito
+        this.email = ''; // Limpiar campo de correo
+        this.message = ''; // Limpiar campo de mensaje
+      } catch (error) {
+        console.error('Error al enviar el correo:', error);
+        alert('Error al enviar el correo'); // Alerta de error
+      }
+    },
+  },
+};
+</script>
+
+<style scoped>
+</style>

@@ -12,6 +12,12 @@
       <!-- Enlaces del navbar centrados -->
       <ul class="flex justify-center space-x-8 items-center">
         <li>
+          <router-link to="/inicio" class="nav-link flex items-center" active-class="active-link">
+            <img src="https://github.com/TheArtificial/pokemon-icons/blob/master/_icons/PNG/1x/384-rayquaza-shiny.png?raw=true" alt="Inicio" class="w-6 h-6 inline-block mr-2" />
+            Inicio
+          </router-link>
+        </li>
+        <li>
           <router-link to="/contacto" class="nav-link flex items-center" active-class="active-link">
             <img src="https://github.com/TheArtificial/pokemon-icons/blob/master/_icons/PNG/1x/384-rayquaza-shiny.png?raw=true" alt="Contacto" class="w-6 h-6 inline-block mr-2" />
             Contacto

@@ -20,6 +20,7 @@
     "express": "^4.21.0",
     "firebase": "^10.13.2",
     "nodemailer": "^6.9.15",
+    "swiper": "^11.1.14",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {

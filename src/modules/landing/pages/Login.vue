@@ -54,7 +54,7 @@ const handleSubmit = async () => {
       // Iniciar sesión
       await signInWithEmailAndPassword(auth, email.value, password.value);
       alert('Inicio de sesión exitoso');
-      router.push('/PrincipalPagina'); // Redirige a la página que prefieras
+      router.push('/inicio'); // Redirige a la página que prefieras
     } else {
       // Registrar nuevo usuario
       await createUserWithEmailAndPassword(auth, email.value, password.value);

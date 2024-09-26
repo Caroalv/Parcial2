@@ -9,6 +9,12 @@ const routes = [
     component: PrincipalPagina,  // Ruta para la página principal
   },
   {
+    path: '/inicio',
+    name: 'InicioPagina',
+    component: () => import('@/modules/landing/pages/InicioPagina.vue'),
+    meta: { requiresAuth: true }, // Esta ruta requiere autenticación
+  },
+  {
     path: '/contacto',
     name: 'ContactoPagina',
     component: () => import('@/modules/landing/pages/ContactoPagina.vue'),

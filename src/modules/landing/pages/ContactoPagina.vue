@@ -9,7 +9,7 @@
         marginwidth="0"
         title="map"
         scrolling="no"
-        src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=San%20Salvador&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+        src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=Pokémon%20Center%20Tokyo&ie=UTF8&t=&z=14&iwloc=B&output=embed"
         style=""
       ></iframe>
     </div>

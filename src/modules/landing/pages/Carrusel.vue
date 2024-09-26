@@ -1,20 +1,25 @@
 <template>
-  <div class="relative w-full h-80"> <!-- Cambia la altura aquí si es necesario -->
-    <swiper :slides-per-view="1" :pagination="{ clickable: true }" class="h-full">
+  <div class="my-10">
+    <swiper-container
+      :slides-per-view="1"
+      :pagination="true"
+      :navigation="true"
+      class="mySwiper"
+    >
       <swiper-slide v-for="(image, index) in images" :key="index">
-        <img :src="image" alt="Pokémon" class="w-full h-full object-cover" />
+        <img :src="image" alt="Carousel image" class="w-full h-auto object-contain rounded-lg" />
       </swiper-slide>
-    </swiper>
+    </swiper-container>
   </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Swiper as SwiperContainer, SwiperSlide } from 'swiper/vue';
 import 'swiper/swiper-bundle.css';
 
 export default {
   components: {
-    Swiper,
+    SwiperContainer,
     SwiperSlide,
   },
   data() {
@@ -30,19 +35,14 @@ export default {
 </script>
 
 <style scoped>
-.relative {
-  position: relative;
+.mySwiper {
+  height: 700px; /* Aumentar la altura del carrusel */
 }
-.w-full {
-  width: 100%;
-}
-.h-80 {
-  height: 20rem; /* Ajustar la altura aquí si es necesario */
-}
-.object-cover {
-  object-fit: cover; /* Asegura que la imagen llene el contenedor */
-}
-.swiper {
-  height: 100%; /* Asegurando que el swiper use toda la altura del contenedor */
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Asegúrate de que no se desborde */
 }
 </style>

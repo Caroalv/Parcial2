@@ -1,24 +1,24 @@
 <template>
-    <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <header class="text-center mb-8">
-        <h1 class="text-4xl font-bold text-yellow-600">Bienvenido a mi Página de Pokémon</h1>
-        <p class="mt-2 text-lg">¡Explora el emocionante mundo de Pokémon y sus aventuras!</p>
-      </header>
-      <PokemonCarousel />
+  <div class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="w-full max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl"> <!-- Aumentar el tamaño del contenedor -->
+      <h1 class="text-center text-2xl font-bold mb-4">Bienvenido a nuestra pagina de Pokemon</h1>
+      <h2 class="text-center text-1xl  mb-4">Aqui encontraras varias secciones dedicadas a el mundo increible de Pokemon</h2>
+      <ImageCarousel />
     </div>
-  </template>
-  
-  <script>
-  import PokemonCarousel from './Carrusel.vue';
-  
-  export default {
-    components: {
-      PokemonCarousel,
-    },
-  };
-  </script>
-  
-  <style>
-  /* Estilos adicionales si son necesarios */
-  </style>
-  
+  </div>
+</template>
+<script>
+import ImageCarousel from './Carrusel.vue';
+
+export default {
+  components: {
+    ImageCarousel,
+  },
+};
+</script>
+
+<style>
+@import 'swiper/swiper-bundle.css';
+</style>
+
+

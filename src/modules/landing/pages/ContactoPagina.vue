@@ -1,21 +1,29 @@
 <template>
-  <section class="text-gray-600 body-font relative">
-    <div class="absolute inset-0 bg-gray-300">
-      <iframe
-        width="100%"
-        height="100%"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0"
-        title="map"
-        scrolling="no"
-        src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=Pokémon%20Center%20Tokyo&ie=UTF8&t=&z=14&iwloc=B&output=embed"
-        style=""
-      ></iframe>
+  <section class="text-gray-600 body-font relative bg-gradient-to-b from-red-500 to-black min-h-screen">
+    <!-- Texto de Encuéntranos Aquí -->
+    <div class="text-center py-10">
+      <h1 class="text-4xl font-pokemon text-white">
+        Encuéntranos <span class="fire-text">aquí:</span>
+      </h1>
     </div>
-    <div class="container px-5 py-24 mx-auto flex">
+
+    <div class="container px-5 py-24 mx-auto flex justify-center">
+      <!-- Mapa reducido de tamaño -->
+      <div class="w-full lg:w-2/3 h-96 relative">
+        <iframe
+          width="100%"
+          height="100%"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="map"
+          scrolling="no"
+          src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=Pokémon%20Center%20Tokyo&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+        ></iframe>
+      </div>
+
       <div
-        class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md"
+        class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-10 w-full mt-10 md:mt-0 shadow-md"
       >
         <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
         <p class="leading-relaxed mb-5 text-gray-600">Busca tus tiendas más cercanas</p>
@@ -42,9 +50,9 @@
           @click="sendEmail"
           class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
         >
-          Enviarsssa
+          Enviar
         </button>
-        <p class="text-xs text-gray-500 mt-3">Este es un texto de ejemplo.</p>
+        <p class="text-xs text-gray-500 mt-3">The Pokemon Company.</p>
       </div>
     </div>
   </section>
@@ -81,4 +89,29 @@ export default {
 </script>
 
 <style scoped>
+/* Fuente estilo Pokémon */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.font-pokemon {
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* Animación de fuego para el texto */
+@keyframes fireAnimation {
+  0% {
+    text-shadow: 0 0 4px #ff9, 0 0 8px #ff9, 0 0 10px #f60, 0 0 20px #f60, 0 0 30px #f30, 0 0 40px #c00;
+  }
+  50% {
+    text-shadow: 0 0 4px #ff9, 0 0 10px #ff9, 0 0 12px #f60, 0 0 22px #f60, 0 0 32px #f30, 0 0 50px #c00;
+  }
+  100% {
+    text-shadow: 0 0 4px #ff9, 0 0 8px #ff9, 0 0 10px #f60, 0 0 20px #f60, 0 0 30px #f30, 0 0 40px #c00;
+  }
+}
+
+.fire-text {
+  color: red;
+  animation: fireAnimation 1.5s infinite alternate;
+  font-weight: bold;
+}
 </style>

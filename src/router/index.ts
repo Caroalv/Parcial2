@@ -21,9 +21,9 @@ const routes = [
     meta: { requiresAuth: true }, // Esta ruta requiere autenticación
   },
   {
-    path: '/features',
-    name: 'FeaturesPagina',
-    component: () => import('@/modules/landing/pages/FeaturesPagina.vue'),
+    path: '/regiones',
+    name: 'RegionesPagina',
+    component: () => import('@/modules/landing/pages/RegionesPagina.vue'),
     meta: { requiresAuth: true }, // Esta ruta requiere autenticación
   },
   {

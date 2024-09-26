@@ -24,9 +24,9 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/features" class="nav-link flex items-center" active-class="active-link">
-            <img src="https://github.com/TheArtificial/pokemon-icons/blob/master/_icons/PNG/1x/383-groudon.png?raw=true" alt="Features" class="w-6 h-6 inline-block mr-2" />
-            Features
+          <router-link to="/regiones" class="nav-link flex items-center" active-class="active-link">
+            <img src="https://github.com/TheArtificial/pokemon-icons/blob/master/_icons/PNG/1x/383-groudon.png?raw=true" alt="Regiones" class="w-6 h-6 inline-block mr-2" />
+            Regiones
           </router-link>
         </li>
         <li>

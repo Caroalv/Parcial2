@@ -9,7 +9,7 @@
       </div>
       <div>
     <Navbar v-if="!isLoginPage" /> <!-- Renderiza el Navbar solo si no estás en la página de inicio de sesión -->
-    <router-view />
+  
   </div>
     </header>
     <!-- Fin Header -->
@@ -20,13 +20,6 @@
     </main>
     <!-- Fin Main -->
 
-    <!-- Footer -->
-    <footer class="flex items-center h-14 px-4 border-t border-gray-300 sm:h-16 md:px-6 lg:px-8">
-      <p class="flex-1 text-sm text-gray-500 text-center">
-        © 20xx Acme Corporation. Derechos reservados
-      </p>
-    </footer>
-    <!-- Fin Footer -->
   </div>
 </template>
 

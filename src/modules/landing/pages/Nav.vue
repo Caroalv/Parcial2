@@ -5,7 +5,7 @@
       <div class="ml-4">
         <router-link to="/" class="nav-link flex items-center" active-class="active-link">
           <img src="https://img.icons8.com/color/48/000000/pokeball--v1.png" alt="Cerrar Sesión" class="w-6 h-6 inline-block mr-2" />
-          Cerrar sesión
+          Cerrar 
         </router-link>
       </div>
 

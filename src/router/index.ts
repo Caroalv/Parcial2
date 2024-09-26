@@ -21,9 +21,15 @@ const routes = [
     meta: { requiresAuth: true }, // Esta ruta requiere autenticación
   },
   {
-    path: '/precios',
-    name: 'PreciosPagina',
-    component: () => import('@/modules/landing/pages/PreciosPagina.vue'),
+    path: '/personajes',
+    name: 'PersonajesPagina',
+    component: () => import('@/modules/landing/pages/PersonajesPagina.vue'),
+    meta: { requiresAuth: true }, // Esta ruta requiere autenticación
+  },
+  {
+    path: '/juego',
+    name: 'JuegoPagina',
+    component: () => import('@/modules/landing/pages/JuegoPagina.vue'),
     meta: { requiresAuth: true }, // Esta ruta requiere autenticación
   },
   {

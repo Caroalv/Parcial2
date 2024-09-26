@@ -24,9 +24,15 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/precios" class="nav-link flex items-center" active-class="active-link">
-            <img src="https://github.com/TheArtificial/pokemon-icons/blob/master/_icons/PNG/1x/145-zapdos.png?raw=true" alt="Precios" class="w-6 h-6 inline-block mr-2" />
-            Precios
+          <router-link to="/personajes" class="nav-link flex items-center" active-class="active-link">
+            <img src="https://github.com/TheArtificial/pokemon-icons/blob/master/_icons/PNG/1x/145-zapdos.png?raw=true" alt="Personajes" class="w-6 h-6 inline-block mr-2" />
+            Personajes
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/juego" class="nav-link flex items-center" active-class="active-link">
+            <img src="https://github.com/TheArtificial/pokemon-icons/blob/master/_icons/PNG/1x/146-moltres.png?raw=true" alt="API" class="w-6 h-6 inline-block mr-2" />
+            Batalla Pokemon
           </router-link>
         </li>
         <li>
@@ -36,6 +42,7 @@
           </router-link>
         </li>
       </ul>
+    </div> 
     </nav>
   </template>
   

@@ -9,7 +9,7 @@
       </div>
       <div>
     <Navbar v-if="!isLoginPage" /> <!-- Renderiza el Navbar solo si no estás en la página de inicio de sesión -->
-    <router-view />
+
   </div>
     </header>
     <!-- Fin Header -->

@@ -1,5 +1,14 @@
 <template>
-    <h1 className="text-3xl font-bold underline">
-      Principal
-    </h1>
+  <div>
+    <h1>Página Principal</h1>
+    <LoginRegister />
+  </div>
 </template>
+
+<script setup lang="ts">
+import LoginRegister from './Login.vue'; // Asegúrate de que la ruta sea correcta
+</script>
+
+<style scoped>
+/* Estilos de tu página principal */
+</style>
